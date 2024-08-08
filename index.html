@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="/img/icoporta.png" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+      <header>
+        <div class="logo">
+          <a href="#">Dilan</a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+            <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+            <li>
+              <a href="#portafolio" onclick="seleccionar()">PORTAFOLIO</a>
+            </li>
+            <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+            <li>
+              <a href="#curriculum" onclick="seleccionar()">CURRICULUM</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+      <div class="contenido-banner">
+        <div class="contenedor-img">
+          <img src="img/Dilan-1.jpg" alt="" />
+        </div>
+        <h1>Dilan Bulding</h1>
+        <h2>Ingeniero de Sistemas</h2>
+        <div class="redes">
+          <a
+            href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BmbIU99%2BWRluSOWm5hL5btQ%3D%3D"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="https://github.com/Dilan2119"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+      <div class="contenido-seccion">
+        <h2>Sobre Mí</h2>
+        <p>
+          <span>Hola, soy Dilan Bulding.</span>Aunque soy frontend, no me limito
+          a eso. He probado las mieles del backend con CRUD y me ha encantado.
+          Estoy emocionado por seguir ampliando mis habilidades y sumergirme en
+          nuevos desafíos. El camino del desarrollo nunca termina y estoy listo
+          para recorrerlo con entusiasmo.
+        </p>
+
+        <div class="fila">
+          <!-- datos personales -->
+          <div class="col">
+            <h3>Datos Personales</h3>
+            <ul>
+              <li>
+                <strong>Teléfono</strong>
+                3122083663
+              </li>
+              <li>
+                <strong>Email</strong>
+                dlenard1919@gmail.com.com
+              </li>
+
+              <li>
+                <strong>Dirección</strong>
+                Cúcuta Norte de Santander, Colombia
+              </li>
+            </ul>
+          </div>
+
+          <!-- intereses -->
+          <div class="col">
+            <h3>Intereses</h3>
+            <div class="contenedor-intereses">
+              <div class="interes">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>JUEGOS</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-headphones"></i>
+                <span>MUSICA</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-plane"></i>
+                <span>VIAJAR</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-dumbbell"></i>
+                <span>GYM</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-person-hiking"></i>
+                <span>DEPORTE</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-book"></i>
+                <span>LIBROS</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-motorcycle"></i>
+                <span>Motos</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-camera"></i>
+                <span>FOTOS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button>
+          <a href="archivos/CV.pdf" download target="_blank">Descargar CV</a>
+          <i class="fa-solid fa-download"></i>
+          <span class="overlay"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portafolio" class="section-projects">
+      <div class="linear-gradient-1"></div>
+      <div class="container-projects">
+        <h2 class="title-projects" id="proyectos">Proyectos</h2>
+        <div>
+          <ul class="ul-projects" id="projects-list">
+            <!-- Proyectos serán insertados aquí por JavaScript -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <!-- SECCION SKILL -->
+    <section id="skills" class="section-skill skills">
+      <div class="container-skill">
+        <h2 class="title-skill">Mis Habilidades</h2>
+        <ul class="ul-skill" id="skills-list">
+          <!-- Skills serán insertadas aquí por JavaScript -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+      <div class="contenido-seccion">
+        <h2>Curriculum</h2>
+        <div class="fila">
+          <div class="col izquierda">
+            <h3>Educación</h3>
+            <div class="item izq">
+              <h4>Secundaria</h4>
+              <span class="casa">Colegio Marco Fidel Suarez</span>
+              <span class="fecha">2012 - 2018</span>
+              <p>
+                Completé mi educación secundaria en el Colegio Marco Fidel
+                Suárez, una institución reconocida por su excelencia académica y
+                su compromiso con la formación integral de los estudiantes.
+                Durante mi tiempo allí, desarrollé habilidades clave en diversas
+                áreas del conocimiento, fomentando tanto el pensamiento crítico
+                como el trabajo en equipo.
+              </p>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+            <div class="item izq">
+              <h4>Ingeniería de sistemas</h4>
+              <span class="casa">Universidad de Pamplona</span>
+              <span class="fecha">2019 - 2024</span>
+              <p>
+                Ingeniero de Sistemas por la Universidad de Pamplona, reconocida
+                por su enfoque en innovación tecnológica y excelencia académica.
+                He completado mis estudios, obteniendo sólidos conocimientos en
+                desarrollo de software, administración de sistemas y gestión de
+                proyectos. Estoy listo para aplicar mis habilidades
+                profesionalmente.
+              </p>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+            <!-- <div class="item izq">
+                        <h4>Ingles</h4>
+                        <span class="casa">Universidad de Oxford</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div> -->
+          </div>
+
+          <div class="col derecha">
+            <h3>Experiencia de trabajo</h3>
+            <div class="item der">
+              <h4>Ingeniero de Sistemas Junior</h4>
+              <span class="casa">Alcaldia de El Zulia</span>
+              <span class="fecha">2024</span>
+              <p>
+                En mi rol como Ingeniero de Sistemas Junior en la Alcaldía de El
+                Zulia, apoyé al grupo de trabajo de la Secretaría de Planeación
+                en la elaboración del plan de desarrollo del municipio
+                2024-2027. Puse en práctica mis conocimientos en ingeniería de
+                sistemas, contribuyendo al análisis y gestión de datos, así como
+                a la implementación de soluciones tecnológicas que optimizaron
+                los procesos de planeación estratégica. Esta experiencia me
+                permitió obtener una valiosa comprensión del sector público y
+                fortalecer mis habilidades en la planificación y ejecución de
+                proyectos de desarrollo municipal.
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+            <div class="item der">
+              <h4>Front Developer</h4>
+              <span class="casa">Cafe la ceiba</span>
+              <span class="fecha">2023</span>
+              <p>
+                Desarrollé la página web para Café La Cebia, destacando sus
+                productos y valores. Aplicando mis conocimientos en diseño web y
+                desarrollo de software, mejoré la presencia en línea de la marca
+                y optimicé su plataforma para una mejor experiencia del usuario.
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <a href="#inicio" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+      <div class="redes">
+        <a
+          href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BmbIU99%2BWRluSOWm5hL5btQ%3D%3D"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="https://github.com/Dilan2119"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="data/project.js"></script>
+    <script src="data/skill.js"></script>
+    <script src="data/icons.js"></script>
+  </body>
+</html>
+
+<style>
+  .li-project {
+    position: relative;
+    list-style: none;
+    border: 1px solid #3d3e4f;
+    overflow: hidden;
+    max-width: 380px;
+    min-width: 300px;
+    width: 100%;
+    border-radius: 2px;
+    transition: transform, box-shadow, 0.3s;
+    border-radius: 7px;
+    background-color: #25242d;
+    z-index: 1;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .li-project:nth-child() {
+    min-height: 100%;
+  }
+
+  .li-project::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    bottom: 0;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  .li-project:hover::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    bottom: 0;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  .li-project:hover {
+    transform: translateY(-10px);
+  }
+  .li-project img {
+    position: relative;
+    display: block;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: left top;
+    user-select: none;
+    pointer-events: none;
+  }
+  .title-project {
+    color: #f6f6f9;
+    padding: 10px 10px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .title-project::first-letter {
+    text-transform: capitalize;
+  }
+
+  .title-technologies {
+    color: #f6f6f9;
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+  .description-project {
+    padding: 0 10px;
+    color: #f6f6f990;
+    font-size: 17px;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .description-project::first-letter {
+    text-transform: capitalize;
+  }
+
+  .title-technologies::first-letter {
+    text-transform: capitalize;
+  }
+
+  .container-technologies {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    padding: 10px 10px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    color: white;
+  }
+  .container-link-project {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .container-link-project a {
+    position: relative;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: #01be96;
+    border-radius: 5px;
+    color: #f6f6f9;
+    justify-content: space-between;
+  }
+  .section-skill {
+    position: relative;
+    overflow: hidden;
+    background-color: #1e2326;
+  }
+  .container-skill {
+    position: relative;
+
+    color: #f6f6f9;
+    padding: 10px 0;
+    margin: 0 auto;
+    padding: 10px 0;
+    height: 100%;
+    max-width: 1355px;
+  }
+  .title-skills {
+    position: relative;
+    display: block;
+    font-size: 27px;
+    padding: 10px 0;
+    color: #f6f6f9;
+    width: 100%;
+    font-weight: 800;
+    scroll-margin-top: 80px;
+  }
+
+  .li-skills {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .p-skill {
+    padding: 5px 0;
+  }
+  .linear-grandient-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000, rgba(1, 190, 150, 0.5));
+    z-index: 0;
+  }
+
+  .ul-skill {
+    position: relative;
+    display: grid;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 0;
+    width: 100%;
+    overflow: hidden;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  @media (min-width: 300px) {
+    .ul-skill {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px 0;
+    }
+  }
+  @media (min-width: 550px) {
+    .ul-skill {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 20px 0;
+    }
+  }
+  @media (min-width: 800px) {
+    .ul-skill {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  @media (min-width: 1000px) {
+    .ul-skill {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  @media (min-width: 1200px) {
+    .ul-skill {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+  @media (min-width: 1350px) {
+    .ul-skill {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+</style>
