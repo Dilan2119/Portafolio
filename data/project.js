@@ -1,7 +1,7 @@
 const projects = [
     {
       img: 'img/veeduriadigital.webp',
-      link: 'https://camfufi.nyc.dom.my.id/',
+      link: 'https://nicgaho.mnz.dom.my.id/',
       title: 'Veeduria Digital',
       description: 'Proyecto FullStack  donde los ciudadanos de el municipio de el zulia pueden ver los proyectos, informar,  entre otras cosas',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Git'],
