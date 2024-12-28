@@ -39,5 +39,9 @@ const skills = [
         name: 'Flutter',
         icon: 'iconos/iconoflu.svg'
     },
+    {
+        name: 'Python',
+        icon: 'iconos/iconopy.svg'
+    },
     // Añade más habilidades si lo deseas
   ];
