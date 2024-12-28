@@ -19,22 +19,13 @@ const projects = [
 
   // Otros proyectos
   {
-    img: "img/blogcafe.webp",
-    link: "https://dilanbulding-blogcafe.netlify.app/",
-    title: "Blog cafe",
+    img: "img/canarifruver.webp",
+    link: "https://www.youtube.com/playlist?list=PLPHeX2rxo3FNmc8zj_yylwTVRpnQ_fKlF",
+    title: "Sistema de Facturación para Supermercados",
     description:
-      'El sitio "Blog De Café" ofrece recetas, consejos y cursos sobre café. Los artículos cubren temas como tipos de granos, recetas deliciosas y beneficios del café.',
+      'Explora el desarrollo y funcionalidad de mi sistema de facturación diseñado para supermercados, integrando Python, MySQL y funcionalidades avanzadas.',
     technologies: ["HTML", "CSS"],
-    icons: ["iconos/iconohtml.svg", "iconos/iconocss.svg"],
-  },
-  {
-    img: "img/frontend.webp",
-    link: "https://almacenderopa.netlify.app/",
-    title: "Almacen de Ropa",
-    description:
-      "es una tienda en línea que ofrece camisetas con diseños relacionados con tecnologías de desarrollo web como VueJS, AngularJS, ReactJS y más. ",
-    technologies: ["HTML", "CSS"],
-    icons: ["iconos/iconohtml.svg", "iconos/iconocss.svg"],
+    icons: ["iconos/iconopy.svg", "iconos/iconossql.svg"],
   },
   {
     img: "img/dental.webp",
@@ -51,6 +42,25 @@ const projects = [
       "iconos/iconossql.svg",
     ],
   },
+  {
+    img: "img/blogcafe.webp",
+    link: "https://dilanbulding-blogcafe.netlify.app/",
+    title: "Blog cafe",
+    description:
+      'El sitio "Blog De Café" ofrece recetas, consejos y cursos sobre café. Los artículos cubren temas como tipos de granos, recetas deliciosas y beneficios del café.',
+    technologies: ["PYTHON", "MYSQL"],
+    icons: ["iconos/iconohtml.svg", "iconos/iconocss.svg"],
+  },
+  {
+    img: "img/frontend.webp",
+    link: "https://almacenderopa.netlify.app/",
+    title: "Almacen de Ropa",
+    description:
+      "es una tienda en línea que ofrece camisetas con diseños relacionados con tecnologías de desarrollo web como VueJS, AngularJS, ReactJS y más. ",
+    technologies: ["HTML", "CSS"],
+    icons: ["iconos/iconohtml.svg", "iconos/iconocss.svg"],
+  },
+ 
   {
     img: "img/Adivina.webp",
     link: "https://adivinanumerosecreto.netlify.app/",
