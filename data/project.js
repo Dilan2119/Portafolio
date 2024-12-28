@@ -16,6 +16,7 @@ const projects = [
       "iconos/iconogit.svg",
     ],
   },
+
   // Otros proyectos
   {
     img: "img/blogcafe.webp",
