@@ -134,7 +134,7 @@
           </div>
         </div>
         <button>
-          <a href="archivos/CV.pdf" download target="_blank">Descargar CV</a>
+          <a href="archivos/Dilan Bulding-2024-Hoja de Vida.pdf" download target="_blank">Descargar CV</a>
           <i class="fa-solid fa-download"></i>
           <span class="overlay"></span>
         </button>
@@ -204,15 +204,21 @@
                 <div class="circuloi"></div>
               </div>
             </div>
-            <!-- <div class="item izq">
-                        <h4>Ingles</h4>
-                        <span class="casa">Universidad de Oxford</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
-                    </div> -->
+            <div class="item izq">
+              <h4>Ingles</h4>
+              <span class="casa">Confanorte (Nivel B1)</span>
+              <span class="fecha">2015 - 2018</span>
+              <p>
+                Competencias desarrolladas en el idioma inglés que me permiten mantener 
+                conversaciones básicas, comprender textos y comunicarme efectivamente 
+                en entornos profesionales. Mi nivel actual me permite participar en 
+                reuniones técnicas, leer documentación en inglés y mantener comunicación 
+                escrita y verbal con clientes o colegas internacionales.
+              </p>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
           </div>
 
           <div class="col derecha">
@@ -228,10 +234,7 @@
                 2024-2027. Puse en práctica mis conocimientos en ingeniería de
                 sistemas, contribuyendo al análisis y gestión de datos, así como
                 a la implementación de soluciones tecnológicas que optimizaron
-                los procesos de planeación estratégica. Esta experiencia me
-                permitió obtener una valiosa comprensión del sector público y
-                fortalecer mis habilidades en la planificación y ejecución de
-                proyectos de desarrollo municipal.
+                los procesos de planeación estratégica.
               </p>
               <div class="conectord">
                 <div class="circulod"></div>
@@ -242,12 +245,12 @@
               <span class="casa">Canarifruve</span>
               <span class="fecha">2024</span>
               <p>
-                Diseñé y desarrollé un sistema de facturación completo para supermercados, 
-                integrando Python y MySQL para gestionar datos de forma eficiente y permitir 
-                conexión simultánea entre varios equipos. El sistema incluye generación de 
-                facturas originales y copias, control de inventarios, y consecutivos automáticos. 
-                Implementé funcionalidades avanzadas como impresión personalizada de facturas y 
-                almacenamiento centralizado para mayor accesibilidad.
+                Diseñé y desarrollé un sistema de facturación completo para
+                supermercados, integrando Python y MySQL para gestionar datos de
+                forma eficiente y permitir conexión simultánea entre varios
+                equipos. El sistema incluye generación de facturas originales y
+                copias, control de inventarios, y consecutivos automáticos.
+               
               </p>
               <div class="conectord">
                 <div class="circulod"></div>
@@ -417,42 +420,55 @@
     position: relative;
     overflow: hidden;
     background-color: #1e2326;
-  }
-  .container-skill {
-    position: relative;
+}
 
+.container-skill {
+    position: relative;
     color: #f6f6f9;
     padding: 10px 0;
     margin: 0 auto;
-    padding: 10px 0;
     height: 100%;
     max-width: 1355px;
-  }
-  .title-skills {
-    position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+}
+
+.title-skills {
     font-size: 27px;
     padding: 10px 0;
     color: #f6f6f9;
-    width: 100%;
     font-weight: 800;
     scroll-margin-top: 80px;
-  }
+    text-align: center;
+    width: 100%;
+}
 
-  .li-skills {
-    display: flex;
+.ul-skill {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    justify-content: center; /* Centra las columnas */
+    padding: 40px 0;
+    width: 100%;
+    max-width: 1200px; /* Ajusta para evitar demasiado espacio en pantallas grandes */
+}
+
+.li-skills {
     list-style: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     text-align: center;
-  }
+    padding: 10px;
+}
 
-  .p-skill {
+.p-skill {
     padding: 5px 0;
-  }
-  .linear-grandient-1 {
+}
+
+.linear-grandient-1 {
     position: absolute;
     left: 0;
     top: 0;
@@ -460,21 +476,9 @@
     height: 100%;
     background: linear-gradient(to top, #000, rgba(1, 190, 150, 0.5));
     z-index: 0;
-  }
+}
 
-  .ul-skill {
-    position: relative;
-    display: grid;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 40px 0;
-    width: 100%;
-    overflow: hidden;
-    grid-template-columns: repeat(8, 1fr);
-  }
-  
+
   @media (min-width: 300px) {
     .ul-skill {
       grid-template-columns: repeat(2, 1fr);
@@ -507,4 +511,6 @@
       grid-template-columns: repeat(8, 1fr);
     }
   }
+
+  /*EDUCACION Y EXPERIENCIA*/
 </style>
