@@ -1,64 +1,73 @@
 const projects = [
+  // =================================================================
+  // == PROYECTOS DE ANÁLISIS DE DATOS Y AUTOMATIZACIÓN
+  // =================================================================
   {
-    // RUTA CORREGIDA: Apunta a la carpeta 'assets/img/'
+    img: "assets/img/veeduriadigital.webp", // DEBES AÑADIR ESTA IMAGEN
+    link: "#", // Reemplaza con el link a tu dashboard
+    title: "Dashboard de KPIs para Soporte Técnico en Power BI",
+    description:
+      "Se desarrolló un dashboard interactivo para monitorear en tiempo real los principales indicadores de rendimiento (KPIs) del área de soporte técnico, optimizando la toma de decisiones.",
+    icons: ["assets/icons/iconohtml.svg"], // DEBES AÑADIR ESTOS ÍCONOS
+    category: "data",
+  },
+  {
+    img: "assets/img/veeduriadigital.webp", // DEBES AÑADIR ESTA IMAGEN
+    link: "#", // Reemplaza con el link a GitHub o a un video
+    title: "Automatización de Reportes Financieros con Python",
+    description:
+      "Creación de un script que automatiza la recolección, limpieza y envío de reportes semanales, reduciendo el tiempo de operación en un 95% y eliminando errores manuales.",
+    icons: ["assets/icons/iconohtml.svg"], // DEBES AÑADIR ESTE ÍCONO
+    category: "data",
+  },
+
+  // =================================================================
+  // == PROYECTOS DE DESARROLLO DE SOFTWARE
+  // =================================================================
+  {
     img: "assets/img/veeduriadigital.webp",
     link: "https://nicgaho.mnz.dom.my.id/",
     title: "Veeduria Digital",
     description:
-      "Proyecto FullStack donde los ciudadanos de el municipio de El Zulia pueden ver los proyectos, informar, entre otras cosas.",
-    technologies: ["HTML", "CSS", "JavaScript", "Git"],
-    // RUTAS CORREGIDAS: Apuntan a la carpeta 'assets/icons/'
-    icons: [
-      "assets/icons/iconohtml.svg",
-      "assets/icons/iconocss.svg",
-      "assets/icons/iconosjs.svg",
-      "assets/icons/iconossql.svg",
-      "assets/icons/iconosass.svg",
-      "assets/icons/iconophp.svg",
-      "assets/icons/iconogit.svg",
-    ],
+      "Proyecto FullStack donde los ciudadanos pueden ver los proyectos del municipio, informar sobre problemas, entre otras cosas.",
+    icons: ["assets/icons/iconohtml.svg", "assets/icons/iconocss.svg", "assets/icons/iconosjs.svg", "assets/icons/iconossql.svg", "assets/icons/iconosass.svg", "assets/icons/iconophp.svg", "assets/icons/iconogit.svg"],
+    category: "software",
   },
   {
     img: "assets/img/canarifruver.webp",
-    link: "https://www.youtube.com/playlist?list=PLPHeX2rxo3FNmc8zj_yylwTVRpnQ_fKlF",
+    link: "https://github.com/Dilan2119/SISTEMA-DE-FACTURACION",
     title: "Sistema de Facturación para Supermercados",
     description:
-      'Explora el desarrollo y funcionalidad de mi sistema de facturación diseñado para supermercados, integrando Python, MySQL y funcionalidades avanzadas.',
-    technologies: ["HTML", "CSS"],
-    icons: ["assets/icons/iconopy.svg", "assets/icons/iconossql.svg"],
+      'Sistema de escritorio con Python y MySQL para gestionar ventas, inventario y facturación concurrente en supermercados.',
+    icons: ["assets/icons/python.svg", "assets/icons/mysql.svg"],
+    category: "software",
   },
   {
     img: "assets/img/dental.webp",
     link: "https://dentalclinica.netlify.app/",
     title: "Dental Clinic",
     description:
-      "Clínica dental que ofrece servicios como odontología cosmética, alineamiento dental, terapias de conducto, y más. Cuentan con áreas especializadas en cosmética, pediatría e implantes.",
-    technologies: ["HTML", "CSS", "JavaScript", "Git"],
-    icons: [
-      "assets/icons/iconohtml.svg",
-      "assets/icons/iconocss.svg",
-      "assets/icons/iconosjs.svg",
-      "assets/icons/iconoboot.svg",
-      "assets/icons/iconossql.svg",
-    ],
+      "Página web para una clínica dental que ofrece servicios de odontología, con áreas especializadas en cosmética, pediatría e implantes.",
+    icons: ["assets/icons/iconohtml.svg", "assets/icons/iconocss.svg", "assets/icons/iconosjs.svg", "assets/icons/iconoboot.svg"],
+    category: "software",
   },
   {
     img: "assets/img/blogcafe.webp",
     link: "https://dilanbulding-blogcafe.netlify.app/",
     title: "Blog de Café",
     description:
-      'El sitio "Blog De Café" ofrece recetas, consejos y cursos sobre café. Los artículos cubren temas como tipos de granos, recetas deliciosas y beneficios del café.',
-    technologies: ["PYTHON", "MYSQL"],
+      'Sitio web que ofrece recetas, consejos y cursos sobre café, cubriendo temas como tipos de granos, recetas y beneficios.',
     icons: ["assets/icons/iconohtml.svg", "assets/icons/iconocss.svg"],
+    category: "software",
   },
-  {
+    {
     img: "assets/img/frontend.webp",
     link: "https://almacenderopa.netlify.app/",
     title: "Almacén de Ropa",
     description:
       "Tienda en línea que ofrece camisetas con diseños relacionados con tecnologías de desarrollo web como VueJS, AngularJS, ReactJS y más.",
-    technologies: ["HTML", "CSS"],
     icons: ["assets/icons/iconohtml.svg", "assets/icons/iconocss.svg"],
+    category: "software",
   },
   {
     img: "assets/img/Adivina.webp",
@@ -66,20 +75,16 @@ const projects = [
     title: "Adivina el Número Secreto",
     description:
       "Juego interactivo donde el jugador intenta adivinar un número secreto. El juego proporciona pistas sobre si el número es mayor o menor hasta que el jugador acierta.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    icons: [
-      "assets/icons/iconohtml.svg",
-      "assets/icons/iconocss.svg",
-      "assets/icons/iconosjs.svg",
-    ],
+    icons: ["assets/icons/iconohtml.svg", "assets/icons/iconocss.svg", "assets/icons/iconosjs.svg"],
+    category: "software",
   },
   {
     img: "assets/img/diseño.webp",
     link: "https://diseofreelance.netlify.app/",
     title: "Diseño Freelance",
     description:
-      "Ofrece servicios de diseño y desarrollo web, aplicaciones móviles y e-commerce. La página incluye secciones sobre sus servicios, una forma de contacto y ubicación en El Zulia, Colombia.",
-    technologies: ["HTML", "CSS", "JavaScript", "Git"],
+      "Ofrece servicios de diseño y desarrollo web, aplicaciones móviles y e-commerce. La página incluye secciones sobre sus servicios, una forma de contacto y ubicación.",
     icons: ["assets/icons/iconohtml.svg", "assets/icons/iconocss.svg"],
+    category: "software",
   },
 ];
