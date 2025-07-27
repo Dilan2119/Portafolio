@@ -59,5 +59,15 @@ const skills = [
     // RUTA CORREGIDA
     icon: "assets/icons/iconotail.svg",
   },
+    {
+    name: "Power Bi",
+    // RUTA CORREGIDA
+    icon: "assets/icons/powerbi.svg",
+  },
+  {
+    name: "Excel",
+    // RUTA CORREGIDA
+    icon: "assets/icons/excel.svg",
+  }
   // Añade más habilidades si lo deseas
 ];

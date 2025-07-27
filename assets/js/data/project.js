@@ -3,27 +3,45 @@ const projects = [
   // == PROYECTOS DE ANÁLISIS DE DATOS Y AUTOMATIZACIÓN
   // =================================================================
   {
-    img: "assets/img/veeduriadigital.webp", // DEBES AÑADIR ESTA IMAGEN
+    img: "assets/img/cuentasmedicas.webp", // DEBES AÑADIR ESTA IMAGEN
     link: "#", // Reemplaza con el link a tu dashboard
-    title: "Dashboard de KPIs para Soporte Técnico en Power BI",
+    title: "Automatización y Análisis de Gestión de Facturación y Radicación",
     description:
-      "Se desarrolló un dashboard interactivo para monitorear en tiempo real los principales indicadores de rendimiento (KPIs) del área de soporte técnico, optimizando la toma de decisiones.",
-    icons: ["assets/icons/iconohtml.svg"], // DEBES AÑADIR ESTOS ÍCONOS
+      "Este proyecto abordó el desafío de gestionar y analizar de forma ineficiente datos de facturación, radicación y glosas, que se manejaban manualmente en hojas de cálculo Excel. La falta de automatización y de una visión unificada impedía una toma de decisiones ágil y el monitoreo efectivo de los procesos operativos. El objetivo fue transformar esta situación, automatizando la preparación de datos y creando un dashboard interactivo para monitorear indicadores claves",
+    icons: ["assets/icons/powerbi.svg","assets/icons/excel.svg","assets/icons/iconopy.svg"], // DEBES AÑADIR ESTOS ÍCONOS
     category: "data",
   },
   {
-    img: "assets/img/veeduriadigital.webp", // DEBES AÑADIR ESTA IMAGEN
-    link: "#", // Reemplaza con el link a GitHub o a un video
-    title: "Automatización de Reportes Financieros con Python",
+    img: "assets/img/automatizacion.webp", // DEBES AÑADIR ESTA IMAGEN
+    link: "https://github.com/Dilan2119/suite-automatizacion-datos", // Reemplaza con el link a GitHub o a un video
+    title: "Suite de Automatización de Datos",
     description:
-      "Creación de un script que automatiza la recolección, limpieza y envío de reportes semanales, reduciendo el tiempo de operación en un 95% y eliminando errores manuales.",
-    icons: ["assets/icons/iconohtml.svg"], // DEBES AÑADIR ESTE ÍCONO
+      "Una aplicación de escritorio desarrollada en Python para automatizar tareas de oficina repetitivas y propensas a errores. ofrece una interfaz gráfica de usuario (GUI) intuitiva y centralizada para procesar archivos JSON y Excel, así como para gestionar la nomenclatura de documentos, mejorando significativamente la productividad y la integridad de los datos",
+    icons: ["assets/icons/iconopy.svg","assets/icons/excel.svg"], // DEBES AÑADIR ESTE ÍCONO
     category: "data",
   },
 
   // =================================================================
   // == PROYECTOS DE DESARROLLO DE SOFTWARE
   // =================================================================
+    {
+    img: "assets/img/veeduriadigital.webp",
+    link: "https://nicgaho.mnz.dom.my.id/",
+    title: "Digiturno",
+    description:
+      "Proyecto FullStack donde los ciudadanos pueden ver los proyectos del municipio, informar sobre problemas, entre otras cosas.",
+    icons: ["assets/icons/iconohtml.svg", "assets/icons/iconocss.svg", "assets/icons/iconosjs.svg", "assets/icons/iconossql.svg", "assets/icons/iconosass.svg", "assets/icons/iconophp.svg", "assets/icons/iconogit.svg"],
+    category: "software",
+  },
+  {
+    img: "assets/img/canarifruver.webp",
+    link: "https://github.com/Dilan2119/SISTEMA-DE-FACTURACION",
+    title: "Sistema de Facturación para Supermercados",
+    description:
+      'Sistema de escritorio con Python y MySQL para gestionar ventas, inventario y facturación concurrente en supermercados.',
+    icons: ["assets/icons/iconopy.svg", "assets/icons/iconossql.svg"],
+    category: "software",
+  },
   {
     img: "assets/img/veeduriadigital.webp",
     link: "https://nicgaho.mnz.dom.my.id/",
@@ -39,7 +57,7 @@ const projects = [
     title: "Sistema de Facturación para Supermercados",
     description:
       'Sistema de escritorio con Python y MySQL para gestionar ventas, inventario y facturación concurrente en supermercados.',
-    icons: ["assets/icons/python.svg", "assets/icons/mysql.svg"],
+    icons: ["assets/icons/iconopy.svg", "assets/icons/iconossql.svg"],
     category: "software",
   },
   {
