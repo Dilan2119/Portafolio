@@ -27,9 +27,8 @@ const projects = [
     {
     img: "assets/img/veeduriadigital.webp",
     link: "https://nicgaho.mnz.dom.my.id/",
-    title: "Digiturno",
-    description:
-      "Proyecto FullStack donde los ciudadanos pueden ver los proyectos del municipio, informar sobre problemas, entre otras cosas.",
+    title: "Líder de Proyecto - Digiturno Clínico",
+    description:"Lideré el desarrollo e implementación de un sistema de gestión de turnos a la medida para una clínica, abarcando el ciclo de vida completo del proyecto. Mis responsabilidades incluyeron desde el levantamiento de requisitos y el diseño de la arquitectura, hasta la coordinación del equipo de desarrollo y la supervisión del despliegue",
     icons: ["assets/icons/iconohtml.svg", "assets/icons/iconocss.svg", "assets/icons/iconosjs.svg", "assets/icons/iconossql.svg", "assets/icons/iconosass.svg", "assets/icons/iconophp.svg", "assets/icons/iconogit.svg"],
     category: "software",
   },
