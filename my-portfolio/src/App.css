@@ -1,38 +1,808 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+/* =============================================
+   VARIABLES Y ESTILOS GLOBALES
+   ============================================= */
+:root {
+    --color-primario: #1CB698;
+    --color-fondo-oscuro: #1e2326;
+    --color-fondo-claro: #252A2E;
+    --color-texto: #fff;
+    --fuente-titulos: 'Righteous', cursive;
+    --fuente-cuerpo: 'Work Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-cuerpo);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+    scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto);
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    color: var(--color-texto);
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* =============================================
+   CLASES DE UTILIDAD (REUTILIZABLES)
+   ============================================= */
+.seccion {
+    background-color: var(--color-fondo-oscuro);
+    padding: 50px 20px;
+}
+
+.contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.seccion-titulo {
+    font-size: 48px;
+    font-family: var(--fuente-titulos);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.fila {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    width: 50%;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--color-texto);
+    padding: 10px 22px;
+    font-size: 16px;
+    color: var(--color-texto);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.5s;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--color-primario);
+    z-index: -1;
+    transition: width 0.5s;
+}
+
+.btn:hover {
+    color: var(--color-texto);
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+
+/* =============================================
+   ENCABEZADO / HEADER
+   ============================================= */
+.contenedor-header {
+    background: var(--color-fondo-oscuro);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    border-bottom: 1px solid #333;
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header .logo a {
+    font-family: var(--fuente-titulos);
+    font-size: 36px;
+    color: var(--color-primario);
+}
+
+.contenedor-header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.contenedor-header nav ul li a {
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+}
+
+.contenedor-header nav ul li a:hover {
+    color: var(--color-primario);
+}
+
+.nav-responsive {
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* =============================================
+   SECCIÓN INICIO
+   ============================================= */
+.inicio {
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
+    url('./fondo.jpg'); /* ¡¡RUTA CORREGIDA!! */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.inicio .contenido-banner {
+    padding: 20px;
+    background-color: var(--color-fondo-oscuro);
+    max-width: 380px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner img {
+    margin-top: 40px;
+    border: 10px solid var(--color-primario);
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.inicio .contenido-banner h1 {
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: var(--fuente-titulos);
+}
+
+.inicio .contenido-banner h2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.inicio .contenido-banner .redes a {
+    display: inline-block;
+    border: 1px solid var(--color-texto);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover {
+    background-color: var(--color-primario);
+}
+
+/* =============================================
+   SECCIÓN SOBRE MÍ
+   ============================================= */
+.sobremi {
+    text-align: center;
+}
+
+/* Ajuste para el botón de Descargar CV */
+.sobremi .btn {
+    margin-top: 40px;
+}
+
+.sobremi .contenido-seccion p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.sobremi .contenido-seccion p span {
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+.sobremi .fila .col {
+    text-align: left;
+}
+
+.sobremi .fila .col h3 {
+    font-size: 28px;
+    font-family: var(--fuente-titulos);
+    margin-bottom: 25px;
+}
+
+.sobremi .fila .col ul {
+    list-style: none;
+}
+
+.sobremi .fila .col ul li {
+    margin: 12px 0;
+}
+
+.sobremi .fila .col ul li strong {
+    display: inline-block;
+    color: var(--color-primario);
+    width: 130px;
+}
+
+.sobremi .contenedor-intereses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sobremi .interes {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-fondo-claro);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.sobremi .interes:hover {
+    background-color: var(--color-primario);
+}
+
+.sobremi .interes i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* =============================================
+   SECCIÓN PROYECTOS (PORTAFOLIO)
+   ============================================= */
+.section-projects {
+    position: relative;
+    padding: 50px 20px;
+    background: var(--color-fondo-oscuro);
+}
+
+.container-projects {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.ul-projects {
+    display: grid;
+    gap: 30px;
+    padding: 40px 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    list-style: none;
+}
+
+/* Tarjetas de proyecto */
+.li-project {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid #3d3e4f;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.li-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagen principal del proyecto */
+.li-project > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido de la tarjeta */
+.project-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.li-project .title-project {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 15px 15px 10px 15px;
+    margin: 0;
+}
+
+.li-project .description-project {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 15px 10px 15px;
+    flex-grow: 1;
+    line-height: 1.4;
+}
+
+/* Sección de tecnologías */
+.li-project .title-technologies {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 15px 5px 15px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.container-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0 15px 15px 15px;
+}
+
+/* Iconos de tecnología */
+.tech-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 3px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+}
+
+.tech-icon:hover {
+    transform: scale(1.2);
+    background-color: rgba(28, 182, 152, 0.2);
+    border-color: var(--color-primario);
+    opacity: 1;
+}
+
+/* Link del proyecto */
+.li-project .container-link-project {
+    padding: 15px;
+    margin-top: auto;
+}
+
+.li-project .container-link-project a {
+    display: inline-block;
+    background-color: var(--color-primario);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 500;
+}
+
+.li-project .container-link-project a:hover {
+    background-color: #17a086;
+}
+
+/* Subtítulos de secciones */
+.subseccion-titulo {
+    font-size: 28px;
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    text-align: center;
+    padding: 40px 0 20px 0;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+
+.subseccion-titulo:first-of-type {
+    margin-top: 0;
+    border-top: none;
+}
+
+/* =============================================
+   RESPONSIVE PARA PROYECTOS
+   ============================================= */
+@media (max-width: 768px) {
+    .ul-projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tech-icon {
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+    }
+    
+    .container-technologies {
+        gap: 5px;
+    }
+    
+    .li-project .title-technologies {
+        font-size: 11px;
+    }
+    
+    .li-project .title-project {
+        font-size: 20px;
+    }
+    
+    .li-project .description-project {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-icon {
+        width: 18px;
+        height: 18px;
+        padding: 2px;
+    }
+    
+    .container-technologies {
+        gap: 4px;
+    }
+    
+    .li-project > img {
+        height: 160px;
+    }
+}
+
+/* =============================================
+   SECCIÓN HABILIDADES (SKILLS)
+   ============================================= */
+.section-skill {
+    background-color: var(--color-fondo-claro);
+    padding: 50px 20px;
+}
+
+.ul-skill {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.li-skills {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.li-skills .skill-icon img {
+    width: 65px;
+    height: 65px;
+    transition: transform 0.3s;
+}
+
+.li-skills:hover .skill-icon img {
+    transform: scale(1.1);
+}
+
+/* =============================================
+   SECCIÓN CURRICULUM
+   ============================================= */
+.curriculum .fila {
+    justify-content: space-between;
+}
+
+.curriculum .fila .col h3 {
+    font-size: 28px;
+    font-family: var(--fuente-titulos);
+    margin-bottom: 25px;
+}
+
+.curriculum .fila .izquierda {
+    border-right: 2px solid var(--color-fondo-claro);
+}
+
+.curriculum .fila .derecha {
+    padding-left: 20px;
+}
+
+.curriculum .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: var(--color-fondo-claro);
+    position: relative;
+    border-left: 5px solid var(--color-primario);
+}
+
+.curriculum .item .casa {
+    color: var(--color-primario);
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+.curriculum .item .fecha {
+    display: block;
+    color: #a3a3a3;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.curriculum .item p {
+    line-height: 1.5;
+}
+
+/* Conectores de la línea de tiempo (simplificado) */
+.curriculum .item .conectori, .curriculum .item .conectord {
+    display: none; /* Opcional: Se puede simplificar o eliminar si el borde izquierdo es suficiente */
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+    background-color: var(--color-fondo-claro);
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+}
+
+footer .redes a {
+    display: inline-block;
+    border: 1px solid var(--color-texto);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .redes a:hover {
+    background-color: var(--color-primario);
+}
+
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primario);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+footer .arriba:hover {
+    background-color: #17a086;
+}
+
+/* =============================================
+   SECCION RESPONSIVE
+   ============================================= */
+@media screen and (max-width:980px) {
+    nav {
+        display: none;
+    }
+    .nav-responsive {
+        display: block;
+    }
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background-color: var(--color-fondo-claro);
+        width: 180px;
+    }
+    nav.responsive ul {
+        display: block !important;
+    }
+    nav.responsive ul li {
+        border-bottom: 1px solid var(--color-texto);
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .sobremi .fila,
+    .curriculum .fila {
+        flex-direction: column;
+    }
+    .sobremi .fila .col,
+    .curriculum .fila .col {
+        width: 100%;
+    }
+    .curriculum .fila .izquierda {
+        border-right: none;
+    }
+}
+
+/* Estilo para los nuevos subtítulos de las secciones de proyectos */
+.subseccion-titulo {
+    font-size: 28px;
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    text-align: center;
+    padding: 40px 0 20px 0;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+
+/* Para que el primer subtitulo no tenga una línea arriba */
+.subseccion-titulo:first-of-type {
+    margin-top: 0;
+    border-top: none;
+}
+
+/* Asegura que el contenido de la tarjeta ocupe el espacio y el link quede abajo
+.li-project {
+    display: flex;
+    flex-direction: column;
+} */
+
+.project-card-content {
+    flex-grow: 1; /* Hace que esta área crezca y empuje el link hacia abajo */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-content .description-project {
+    flex-grow: 1; /* Empuja las tecnologías hacia abajo */
+}
+
+/* Nuevos estilos para los iconos de tecnología */
+.container-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0 15px 15px 15px;
+}
+
+.tech-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tech-icon:hover {
+    transform: scale(1.15);
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+/* Mejora para el contenedor de tecnologías */
+.li-project .title-technologies {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px 5px 15px;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive para iconos más pequeños en pantallas móviles */
+@media (max-width: 768px) {
+    .tech-icon {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    
+    .container-technologies {
+        gap: 8px;
+    }
+    
+    .li-project .title-technologies {
+        font-size: 13px;
+    }
+}
+
+/* =============================================
+   ESTILOS PARA ICONOS DE TECNOLOGÍA - PEQUEÑOS Y ESTÉTICOS
+   ============================================= */
+
+/* Contenedor de tecnologías */
+.container-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+    padding: 0 15px 15px 15px;
+}
+
+/* Iconos de tecnología - Pequeños y estéticos */
+.tech-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+}
+
+.tech-icon:hover {
+    transform: scale(1.2);
+    background-color: rgba(28, 182, 152, 0.2);
+    border-color: var(--color-primario);
+    opacity: 1;
+}
+
+/* Título de tecnologías más sutil */
+.li-project .title-technologies {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 15px 3px 15px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .tech-icon {
+        width: 18px;
+        height: 18px;
+        padding: 2px;
+    }
+    
+    .container-technologies {
+        gap: 5px;
+    }
+    
+    .li-project .title-technologies {
+        font-size: 11px;
+        padding: 6px 15px 2px 15px;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .tech-icon {
+        width: 16px;
+        height: 16px;
+        padding: 1px;
+    }
+    
+    .container-technologies {
+        gap: 4px;
+    }
 }
