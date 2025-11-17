@@ -806,3 +806,146 @@ footer .arriba:hover {
         gap: 4px;
     }
 }
+/* ... (todo tu CSS existente va aquí arriba) ... */
+
+/* =============================================
+   NUEVOS ESTILOS PARA LA PÁGINA DE DETALLE DE PROYECTO
+   ============================================= */
+.auditoria-details {
+    padding-top: 100px; /* Espacio para el header fijo */
+    background-color: var(--color-fondo-oscuro); /* Mantiene el fondo de tu web */
+    min-height: 100vh;
+}
+
+/* Descripción de introducción del proyecto */
+.auditoria-details .project-intro-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 900px;
+    margin: -10px auto 50px auto; /* Un poco más de espacio */
+    color: #ccc;
+}
+
+/* Cuadrícula para la galería de imágenes */
+.gallery-grid {
+    display: grid;
+    /* Crea 2 columnas en pantallas de tablet/desktop, 1 en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Cada item de la galería */
+.gallery-item {
+    background-color: var(--color-fondo-claro); /* Usa tu color de fondo claro */
+    border-radius: 10px;
+    overflow: hidden; /* Para que la imagen no se salga de los bordes redondos */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio */
+    display: block;
+    border-bottom: 2px solid var(--color-primario); /* Un toque de color */
+}
+
+.gallery-item h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 22px;
+    color: var(--color-primario);
+    padding: 20px 20px 10px 20px;
+    margin: 0;
+}
+
+.gallery-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+    padding: 0 20px 25px 20px;
+    margin: 0;
+    flex-grow: 1; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+/* Contenedor del botón "Volver" */
+.back-button-container {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 30px; /* Espacio antes del footer */
+}
+
+.back-button-container .btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+}
+
+.back-button-container .btn:hover {
+    color: var(--color-texto);
+    /* 'after' se encargará del fondo como en tus otros botones */
+}
+
+.back-button-container .btn i {
+    transition: transform 0.3s;
+}
+
+.back-button-container .btn:hover i {
+    transform: translateX(-5px); /* Pequeño efecto en el icono */
+}
+
+
+/* --- Responsive para la Galería --- */
+@media screen and (max-width: 980px) {
+    .gallery-grid {
+        /* 1 sola columna en pantallas más pequeñas */
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .gallery-item img {
+        height: 220px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .auditoria-details .project-intro-description {
+        font-size: 1rem;
+    }
+
+    .gallery-item img {
+        height: 180px; /* Imágenes más pequeñas en móvil */
+    }
+
+    .gallery-item h3 {
+        font-size: 20px;
+    }
+    
+    .gallery-item p {
+        font-size: 15px;
+    }
+}
+/* ... (todo tu CSS existente va aquí arriba) ... */
+
+/* =============================================
+   NUEVO MODIFICADOR PARA IMÁGENES DE PROYECTO
+   ============================================= */
+/* Esta clase es para imágenes (como dashboards anchos)
+  que se ven cortadas con "cover". 
+  Usará "contain" para mostrar la imagen completa.
+*/
+.li-project > img.img-fit-contain {
+  object-fit: contain;
+  background-color: var(--color-fondo-claro);
+  padding: 10px; /* <-- Opcional: Esto la hará ver más pequeña y centrada */
+}
