@@ -101,7 +101,7 @@ const projects = [
   },
   {
     img: "assets/img/diseño.webp",
-    link: "https://diseofreelance.netlify.app/",
+    link: "httpss://diseofreelance.netlify.app/",
     title: "Diseño Freelance",
     description:
       "Ofrece servicios de diseño y desarrollo web, aplicaciones móviles y e-commerce. La página incluye secciones sobre sus servicios, una forma de contacto y ubicación.",
@@ -157,7 +157,7 @@ function App() {
   const dataProjects = projects.filter(p => p.category === 'data');
   const softwareProjects = projects.filter(p => p.category === 'software');
 
-  // --- (PASO 3) FUNCIÓN RENDERIZAR PROYECTOS (¡MODIFICADA!) ---
+  // --- (PASO 3) FUNCIÓN RENDERIZAR PROYECTOS (¡CORREGIDA!) ---
   // Ahora detecta el link especial "/auditoria-ipsch"
   const renderProjectList = (projectsToShow) => {
     return projectsToShow.map((project, index) => {
@@ -193,9 +193,12 @@ function App() {
             {/* --- LÓGICA CONDICIONAL PARA EL LINK --- */}
             {isInternalLink ? (
               // Si es interno, llama a seleccionarView
-              <a href="#" onClick={(e) => {
-                e.preventDefault();
-                seleccionarView('auditoria-ipsch');
+              // --- ¡¡ESTA ES LA LÍNEA CORREGIDA PARA ARREGLAR EL BUILD!! ---
+              <a 
+                 href="#portafolio" // Usamos un href válido (en lugar de "#")
+                 onClick={(e) => {
+                   e.preventDefault(); // Prevenimos el salto de ancla
+                   seleccionarView('auditoria-ipsch');
               }}>
                 Ver más
               </a>
