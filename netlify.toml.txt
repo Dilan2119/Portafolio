@@ -1,0 +1,21 @@
+# Configuración de Netlify para un proyecto de React en una subcarpeta
+
+[build]
+# 1. Directorio base Dónde está tu proyecto (el que tiene package.json)
+#    (Asegúrate de que sea my-portfolio con y griega)
+base    = my-portfolio
+
+# 2. Comando de build Qué comando ejecutar
+command = npm run build
+
+# 3. Directorio de publicación Qué carpeta mostrar (relativo al 'base')
+#    (Solo build, NO my-portfoliobuild)
+publish = build
+
+# --- REGLA ADICIONAL MUY IMPORTANTE ---
+# Esto es para que tu nueva página auditoria-ipsch funcione
+# si alguien recarga la página.
+[[redirects]]
+  from = 
+  to = index.html
+  status = 200
