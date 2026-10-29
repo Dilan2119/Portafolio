@@ -389,31 +389,31 @@ function App() {
                 <div className="col izquierda">
                   <h3>Educación</h3>
                   <div className="item izq">
-                    <h4>Ingeniería de sistemas</h4>
-                    <span className="casa">Universidad de Pamplona</span>
-                    <span className="fecha">2019 - 2024</span>
+                    <h4>Especialización en Analítica de Datos</h4>
+                    <span className="casa">Universidad Católica de Colombia</span>
+                    <span className="fecha">2027 (Matriculado - Modalidad Virtual)</span>
                     <p>
-                      Ingeniero de Sistemas egresado, con sólidos conocimientos en
-                      desarrollo de software, administración de sistemas y gestión
-                      de proyectos, listo para aplicar mis habilidades en un entorno
-                      profesional.
+                      Posgrado enfocado en arquitectura de Data Warehouse, Big Data,
+                      Estadística Probabilística e Inteligencia de Negocios para la
+                      Toma de Decisiones, integrando herramientas avanzadas de
+                      visualización y bases de datos corporativas.
                     </p>
                     <div className="conectori"><div className="circuloi"></div></div>
                   </div>
                   <div className="item izq">
-                    <h4>Secundaria</h4>
-                    <span className="casa">Colegio Marco Fidel Suarez</span>
-                    <span className="fecha">2012 - 2018</span>
+                    <h4>Ingeniería de sistemas</h4>
+                    <span className="casa">Universidad de Pamplona</span>
+                    <span className="fecha">2019 - 2024</span>
                     <p>
-                      Educación secundaria completada, fomentando el pensamiento
-                      crítico y el trabajo en equipo en una institución reconocida
-                      por su excelencia académica.
+                      Ingeniero de Sistemas graduado con promedio destacado (4.07).
+                      Sólida base en arquitectura de bases de datos, ingeniería de
+                      software, automatización y gestión de infraestructura TI.
                     </p>
                     <div className="conectori"><div className="circuloi"></div></div>
                   </div>
                   <div className="item izq">
                     <h4>Inglés</h4>
-                    <span className="casa">Confanorte (Nivel B1)</span>
+                    <span className="casa">Comfanorte (Nivel B1)</span>
                     <span className="fecha">2015 - 2018</span>
                     <p>
                       Competencias en inglés que me permiten mantener conversaciones,
@@ -427,6 +427,29 @@ function App() {
                 <div className="col derecha">
                   <h3>Experiencia de trabajo</h3>
                   <div className="item der">
+                    <h4>Coordinador de Sistemas & BI</h4>
+                    <span className="casa">Clinical House</span>
+                    <span className="fecha">2025 - Actualidad</span>
+                    <p>
+                      Liderazgo del área de TI (desarrollo e infraestructura).
+                      Automatización de reportería clínica y diseño de dashboards en
+                      tiempo real con Power BI y MySQL, reduciendo tiempos operativos
+                      y optimizando la toma de decisiones gerenciales.
+                    </p>
+                    <div className="conectord"><div className="circulod"></div></div>
+                  </div>
+                  <div className="item der">
+                    <h4>Desarrollador de Software & Datos</h4>
+                    <span className="casa">Canarifruver (España)</span>
+                    <span className="fecha">2024 - 2025</span>
+                    <p>
+                      Diseño y desarrollo de un sistema automatizado de facturación
+                      en Python y MySQL con control de inventarios, gestión de
+                      tarifas y envío automático de reportes financieros.
+                    </p>
+                    <div className="conectord"><div className="circulod"></div></div>
+                  </div>
+                  <div className="item der">
                     <h4>Ingeniero de Sistemas Junior</h4>
                     <span className="casa">Alcaldía de El Zulia</span>
                     <span className="fecha">2024</span>
@@ -435,28 +458,6 @@ function App() {
                       aplicando conocimientos en análisis de datos e implementación
                       de soluciones tecnológicas para optimizar la planeación
                       estratégica.
-                    </p>
-                    <div className="conectord"><div className="circulod"></div></div>
-                  </div>
-                  <div className="item der">
-                    <h4>Sistema de Facturación</h4>
-                    <span className="casa">Canarifruver</span>
-                    <span className="fecha">2024</span>
-                    <p>
-                      Diseño y desarrollo de un sistema de facturación en Python y
-                      MySQL, con control de inventarios, facturación concurrente y
-                      generación de reportes.
-                    </p>
-                    <div className="conectord"><div className="circulod"></div></div>
-                  </div>
-                  <div className="item der">
-                    <h4>Front-end Developer</h4>
-                    <span className="casa">Café la Ceiba</span>
-                    <span className="fecha">2023</span>
-                    <p>
-                      Desarrollo de la página web de la marca, mejorando su
-                      presencia en línea y optimizando la plataforma para una mejor
-                      experiencia de usuario.
                     </p>
                     <div className="conectord"><div className="circulod"></div></div>
                   </div>
