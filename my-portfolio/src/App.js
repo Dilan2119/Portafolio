@@ -125,6 +125,23 @@ const projects = [
     category: "software",
   },
   {
+    img: "assets/img/digiturno/digiturno_visor.png",
+    link: "/digiturno-case-study",
+    caseStudyId: "digiturno",
+    buttonText: "Ver Arquitectura y Caso de Estudio",
+    roleBadge: "Real-Time Distributed Systems & Micro-Frontends | Arquitecto Full-Stack",
+    title: "Digiturno — Ecosistema Multi-Sede de Gestión de Filas y Turnos en Tiempo Real",
+    description:
+      "Plataforma full-stack tipo micro-frontends diseñada para gestionar el flujo de pacientes en clínicas multi-sede. Compuesta por un backend en NestJS, PostgreSQL (Prisma), Redis y Socket.IO, junto a 4 aplicaciones en React + TypeScript + Tailwind CSS (CMS Administrativo, Consola Médica, Visor TV con síntesis de voz TTS y Kiosco Táctil) desplegadas en contenedores Docker con Nginx.",
+    icons: [
+      "assets/icons/iconoreact.svg",
+      "assets/icons/iconotail.svg",
+      "assets/icons/iconossql.svg"
+    ],
+    techTags: ["NestJS", "React + TypeScript", "PostgreSQL (Prisma)", "Redis", "Socket.IO", "Docker & Nginx"],
+    category: "software",
+  },
+  {
     // --- ¡NUEVO PROYECTO AÑADIDO AQUÍ! ---
     img: "assets/img/auditoria_ipsch_dashboard.webp", // Usa la imagen del dashboard como miniatura
     link: "/auditoria-ipsch", // Esta es la "ruta interna" especial que usaremos
@@ -140,7 +157,7 @@ const projects = [
 
   {
     img: "assets/img/canarifruver.webp",
-    link: "https://github.com/Dilan2119/SISTEMA-DE-FACTURACION",
+    link: "https://github.com/Dilan2119/sistema-facturacion-supermercado",
     title: "Sistema de Facturación para Supermercados",
     description:
       'Sistema de escritorio con Python y MySQL para gestionar ventas, inventario y facturación concurrente en supermercados.',
@@ -372,6 +389,56 @@ const caseStudies = {
           "Estandarización de comités y reuniones mediante la configuración de Plantillas Maestras, creación y seguimiento digital de actas institucionales, y un módulo de visualización de reportes y estadísticas operativas.",
       },
     ],
+  },
+  digiturno: {
+    badge: "Real-Time Distributed Systems & Micro-Frontends | Arquitecto Full-Stack",
+    title: "Digiturno — Sistema Multi-Sede de Gestión de Filas y Turnos Clínicos en Tiempo Real",
+    subtitle:
+      "Arquitectura multi-tenant en tiempo real compuesta por 5 servicios dockerizados (Backend NestJS + PostgreSQL/Prisma + Redis + Socket.IO y 4 micro-frontends en React, TypeScript y Tailwind CSS) que sincroniza con latencia sub-segundo el dispensado de turnos, el llamado médico y la difusión multimedia en salas de espera.",
+    techTags: [
+      "NestJS",
+      "React",
+      "TypeScript",
+      "PostgreSQL + Prisma",
+      "Redis Adapter",
+      "Socket.IO",
+      "Tailwind CSS",
+      "Docker & Nginx",
+      "Vitest",
+      "JWT & Rate Limiting"
+    ],
+    kpis: [
+      "Latencia Sub-Segundo con Socket.IO y Redis Adapter",
+      "Prevención de Race Conditions con Bloqueos Transaccionales e Idempotencia",
+      "Arquitectura Multi-Tenant por Sede con Control RBAC y Enmascaramiento de Datos",
+      "5 Servicios Dockerizados (Multi-Stage Builds + Nginx) Validados con Vitest",
+    ],
+    sections: [
+      {
+        title: "1. Visor TV de Sala de Espera con Síntesis de Voz (TTS) y Multimedia HD",
+        img: "/assets/img/digiturno/digiturno_visor.png",
+        description:
+          "Pantalla pública conectada vía WebSockets que proyecta en tiempo real el turno llamado (ej. MED-014), servicio, consultorio, nombre del paciente e historial de últimos llamados (Vacunación, Laboratorio, Admisiones). Integra anuncio automático por voz mediante Web Speech API (TTS) y un reproductor de carrusel multimedia HD administrable desde el CMS para campañas de salud preventiva."
+      },
+      {
+        title: "2. CMS Administrativo y Dashboard Operativo Multi-Sede",
+        img: "/assets/img/digiturno/digiturno_cms.png",
+        description:
+          "Panel gerencial y de configuración multi-tenant que monitorea en tiempo real el promedio de espera global (en segundos y minutos), total de pacientes atendidos, tasa de ausencia y gráficas comparativas de tiempos de espera por servicio y productividad por profesional. Permite administrar sedes, salas, visores, servicios, módulos, usuarios y contenidos multimedia."
+      },
+      {
+        title: "3. Consola de Atención para Profesionales (Tiempo Real + Privacidad)",
+        img: "/assets/img/digiturno/digiturno_consola.png",
+        description:
+          "Interfaz operativa para médicos y personal asistencial con conexión persistente en línea (WS), filtrado granular de colas autorizadas por profesional y sala, cronómetro de espera por paciente y protección de privacidad mediante enmascaramiento de documentos de identidad (ID: ******4821). Incluye controles de flujo para llamar siguiente paciente, re-llamar, marcar ausente o finalizar atención."
+      },
+      {
+        title: "4. Kiosco Táctil Dispensador de Turnos (Concurrencia y Numeración Atómica)",
+        img: "/assets/img/digiturno/digiturno_kiosco.png",
+        description:
+          "Terminal de autogestión táctil por sede para la asignación de turnos según prefijo clínico (Medicina General, Vacunación, Laboratorio Clínico, Admisiones y Caja, Odontología y Entrega de Medicamentos). Resuelve condiciones de carrera (race conditions) mediante bloqueos transaccionales en base de datos, numeración atómica e idempotencia, respaldado por pruebas de integración en Vitest."
+      }
+    ]
   },
   "auditoria-ipsch": {
     title: "Plataforma de Auditoría Médica IPSCH",
