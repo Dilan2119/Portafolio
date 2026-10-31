@@ -58,6 +58,31 @@ const projects = [
     imageFit: "contain",
   },
   {
+    img: "assets/img/Ordenamientos.png",
+    link: "/dashboard-bi-ordenamientos",
+    caseStudyId: "dashboard-bi-ordenamientos",
+    buttonText: "Ver Dashboard Clínico",
+    roleBadge: "Clinical Analytics & Medical Audit | Control de Pertinencia y Costos",
+    title: "Dashboard BI: Auditoría de Ordenamientos Médicos y Frecuencia de Uso",
+    description:
+      "Tablero de inteligencia clínica para auditar en tiempo real la prescripción y ordenamiento médico (medicamentos, imagenología y procedimientos) por sede, aseguradora, especialidad y fecha. Identifica el ranking de profesionales con mayor volumen de emisión y los pacientes con mayor frecuencia de ordenamiento correlacionados con su diagnóstico clínico.",
+    kpis: [
+      "Ranking de Profesionales y Especialidades por Volumen de Ordenamiento",
+      "Segmentación por Clasificación (Medicamentos, Imagenología, Laboratorios)",
+      "Identificación de Pacientes Hiperfrecuentadores y Diagnóstico Asociado",
+      "Filtros Dinámicos por Sede, Entidad Aseguradora (EPS) y Periodo",
+    ],
+    icons: [
+      "assets/icons/powerbi.svg",
+      "assets/icons/dato1.png",
+      "assets/icons/iconossql.svg",
+      "assets/icons/excel.svg"
+    ],
+    techTags: ["Power BI", "DAX", "MySQL", "Auditoría Médica", "Control de Frecuencia"],
+    category: "data",
+    imageFit: "contain",
+  },
+  {
     img: "assets/img/automatizacion.webp",
     link: "https://github.com/Dilan2119/suite-automatizacion-datos",
     title: "Suite de Automatización de Datos",
@@ -241,6 +266,24 @@ const caseStudies = {
     embedTitle: "Contabilidad_House_Ingresos(HV)",
     privacyNote:
       "* Nota: Las cifras monetarias, metas y registros expuestos en este dashboard corresponden a datos sintéticos de prueba con fines demostrativos, protegiendo la confidencialidad financiera de la institución (Habeas Data).",
+  },
+  "dashboard-bi-ordenamientos": {
+    badge: "Clinical Analytics & Medical Audit | Control de Pertinencia y Costos",
+    title: "Dashboard BI: Auditoría de Ordenamientos Médicos y Frecuencia de Uso",
+    subtitle:
+      "Herramienta gerencial y de auditoría médica conectada a la base de datos central para monitorear el patrón de prescripción institucional. Permite cruzar variables de especialidad, clasificación del servicio (medicamentos, ayudas diagnósticas, imagenología), profesional, paciente y diagnóstico (CIE-10) para controlar desviaciones en contratos y optimizar la pertinencia médica.",
+    techTags: ["Power BI", "DAX", "MySQL", "Power Query", "Analítica Clínica"],
+    kpis: [
+      "Ranking de Profesionales y Especialidades por Volumen de Ordenamiento",
+      "Segmentación por Clasificación (Medicamentos, Imagenología, Laboratorios)",
+      "Identificación de Pacientes Hiperfrecuentadores y Diagnóstico Asociado",
+      "Filtros Dinámicos por Sede, Entidad Aseguradora (EPS) y Periodo",
+    ],
+    embedUrl:
+      "https://app.powerbi.com/view?r=eyJrIjoiZTEzMGI2YzUtNGRkZS00ZDQxLWI4MzEtYmJhYTc4NjhiYTVkIiwidCI6IjFjMjA3MWI1LTBmODAtNDYzYS1hMDY1LWNkZWFmMmZjNzZmMyIsImMiOjR9",
+    embedTitle: "ORDENAMIENTOS(HV)",
+    privacyNote:
+      "* Nota: Los nombres de profesionales, identificaciones de usuarios, diagnósticos y cifras expuestas en este dashboard corresponden a registros sintéticos de prueba con fines demostrativos, garantizando la reserva de la historia clínica y la protección de datos personales (Habeas Data).",
   },
   nexacore: {
     title: "NexaCore — Plataforma de Gestión Hospitalaria",
